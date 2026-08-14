@@ -69,7 +69,7 @@ export const DATA = {
       badges: [],
       location: "Cairo, Egypt",
       title: "Founder & Software Engineer",
-      logoUrl: "",
+      logoUrl: "/theta-tech-logo.jpg",
       start: "2025",
       end: "Present",
       description:
