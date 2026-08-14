@@ -100,8 +100,8 @@ export const DATA = {
   ],
   education: [
     {
-      school: "Faculty of Engineering, Shubra",
-      href: "https://www.shams.edu.eg",
+      school: "October High Institute for Engineering and Technology",
+      href: "https://ohi.edu.eg",
       degree: "B.Sc. Communication & Electronics Engineering",
       logoUrl: "",
       start: "2023",
