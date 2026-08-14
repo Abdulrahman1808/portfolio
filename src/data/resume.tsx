@@ -81,7 +81,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Data Annotator",
-      logoUrl: "",
+      logoUrl: "/meti-logo.jpg",
       start: "Oct 2024",
       end: "Feb 2025",
       description:
