@@ -62,6 +62,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Theta Tech",
+      href: "https://github.com/Abdulrahman1808",
+      badges: [],
+      location: "Cairo, Egypt",
+      title: "Founder & Software Engineer",
+      logoUrl: "",
+      start: "2025",
+      end: "Present",
+      description:
+        "Founded and run Theta Tech, a software startup building point-of-sale systems and digital tools for businesses, including Theta POS — a desktop POS with a real-time web dashboard.",
+    },
+    {
       company: "Micro Engineering Tech Inc. (METI)",
       href: "https://microengineeringtech.com",
       badges: [],
@@ -106,7 +118,7 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "CC POS (Theta POS)",
+      title: "Theta POS",
       href: "https://theta-pos.vercel.app/login",
       dates: "2025",
       active: true,
