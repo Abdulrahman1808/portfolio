@@ -139,7 +139,7 @@ export default function Page() {
                     ) : (
                       <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
                     )}
-                    <div className="flex-1 min-w-0 flex flex-col gap-0.5">
+                    <div className="flex-1 min-w-0 flex flex-col gap-1">
                       <div className="font-semibold leading-none flex items-center gap-2">
                         {certification.name}
                         <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" aria-hidden />
@@ -147,6 +147,11 @@ export default function Page() {
                       <div className="font-sans text-sm text-muted-foreground">
                         {certification.issuer}
                       </div>
+                      {certification.description && (
+                        <div className="text-xs text-muted-foreground/80 leading-relaxed">
+                          {certification.description}
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">

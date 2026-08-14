@@ -120,11 +120,13 @@ export const DATA = {
   ],
   certifications: [
     {
-      name: "Cisco Networking Academy - Cybersecurity",
-      href: "https://www.netacad.com/",
-      issuer: "Cisco Networking Academy",
-      badgeUrl: "",
+      name: "Introduction to Cybersecurity",
+      href: "https://www.netacad.com/courses/cybersecurity/introduction-to-cybersecurity",
+      issuer: "Cisco",
+      badgeUrl: "/cisco-cybersecurity-badge.png",
       year: "2025",
+      description:
+        "Completed the Cisco Introduction to Cybersecurity course. Student-level credential covering cyber threats, vulnerabilities, threat detection and defense, why cybersecurity is a growing profession, and career opportunities in cybersecurity.",
     },
   ],
   projects: [
