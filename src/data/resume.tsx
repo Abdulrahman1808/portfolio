@@ -9,6 +9,7 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
+import { Dotnet } from "@/components/ui/svgs/dotnet";
 
 export const DATA = {
   name: "Abdulrahman Mohamed Sayed",
@@ -24,6 +25,7 @@ export const DATA = {
   avatarUrl: "/me.png",
   skills: [
     { name: "C#", icon: Csharp },
+    { name: ".NET", icon: Dotnet },
     { name: "C++", icon: Java },
     { name: "Python", icon: Python },
     { name: "TypeScript", icon: Typescript },
@@ -114,6 +116,15 @@ export const DATA = {
       logoUrl: "",
       start: "2020",
       end: "2023",
+    },
+  ],
+  certifications: [
+    {
+      name: "Cisco Networking Academy - Cybersecurity",
+      href: "https://www.netacad.com/",
+      issuer: "Cisco Networking Academy",
+      badgeUrl: "",
+      year: "2025",
     },
   ],
   projects: [
