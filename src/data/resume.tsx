@@ -65,7 +65,7 @@ export const DATA = {
   work: [
     {
       company: "Theta Tech",
-      href: "https://github.com/Abdulrahman1808",
+      href: "https://abdulrahman1808.github.io/THETA-TECH/",
       badges: [],
       location: "Cairo, Egypt",
       title: "Founder & Software Engineer",
@@ -199,7 +199,7 @@ export const DATA = {
     },
     {
       title: "Theta Tech Company Website",
-      href: "https://github.com/Abdulrahman1808",
+      href: "https://abdulrahman1808.github.io/THETA-TECH/",
       dates: "2025",
       active: true,
       description:
@@ -207,9 +207,9 @@ export const DATA = {
       technologies: ["React", "TypeScript", "TailwindCSS"],
       links: [
         {
-          type: "Source",
-          href: "https://github.com/Abdulrahman1808",
-          icon: <Icons.github className="size-3" />,
+          type: "Website",
+          href: "https://abdulrahman1808.github.io/THETA-TECH/",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
