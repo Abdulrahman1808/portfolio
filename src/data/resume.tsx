@@ -113,7 +113,7 @@ export const DATA = {
       school: "El Salam Technical Secondary School",
       href: "https://www.moe.gov.eg",
       degree: "Technical Diploma in Computer Science (GPA 96.6%)",
-      logoUrl: "",
+      logoUrl: "/elsalam-logo.png",
       start: "2020",
       end: "2023",
     },
