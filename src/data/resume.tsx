@@ -105,7 +105,7 @@ export const DATA = {
       school: "October High Institute for Engineering and Technology",
       href: "https://ohi.edu.eg",
       degree: "B.Sc. Communication & Electronics Engineering",
-      logoUrl: "",
+      logoUrl: "/ohi-logo.jpg",
       start: "2023",
       end: "2028",
     },
