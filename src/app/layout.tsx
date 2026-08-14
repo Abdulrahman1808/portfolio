@@ -4,20 +4,20 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
-const geist = Geist({
-  subsets: ["latin"],
+const cabinetGrotesk = localFont({
+  src: "../fonts/CabinetGrotesk-Medium.ttf",
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
+  weight: "500",
 });
 
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+const clashDisplay = localFont({
+  src: "../fonts/ClashDisplay-Semibold.ttf",
   variable: "--font-mono",
+  weight: "600",
 });
 
 export const metadata: Metadata = {
@@ -66,11 +66,11 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
-          geist.variable,
-          geistMono.variable
+          cabinetGrotesk.variable,
+          clashDisplay.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
               <FlickeringGrid

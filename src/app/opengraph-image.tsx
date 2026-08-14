@@ -1,9 +1,10 @@
  
 import { ImageResponse } from "next/og";
 import { DATA } from "@/data/resume";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
-export const runtime = "edge";
-
+export const dynamic = "force-static";
 export const alt = DATA.name;
 export const size = {
     width: 1200,
@@ -13,17 +14,30 @@ export const contentType = "image/png";
 
 const getFontData = async () => {
     try {
-        const [cabinetGrotesk, clashDisplay] = await Promise.all([
-            fetch(
-                new URL("../../public/fonts/CabinetGrotesk-Medium.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-            fetch(
-                new URL("../../public/fonts/ClashDisplay-Semibold.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-        ]);
+        const fontDir = join(process.cwd(), "public", "fonts");
+        const toArrayBuffer = (buf: Buffer) =>
+            buf.buffer.slice(
+                buf.byteOffset,
+                buf.byteOffset + buf.byteLength
+            ) as ArrayBuffer;
+        const cabinetGrotesk = toArrayBuffer(
+            readFileSync(join(fontDir, "CabinetGrotesk-Medium.ttf"))
+        );
+        const clashDisplay = toArrayBuffer(
+            readFileSync(join(fontDir, "ClashDisplay-Semibold.ttf"))
+        );
         return { cabinetGrotesk, clashDisplay };
     } catch (error) {
         console.error("Failed to load fonts:", error);
+        return null;
+    }
+};
+
+const getAvatarDataUri = () => {
+    try {
+        const buf = readFileSync(join(process.cwd(), "public", "me.png"));
+        return `data:image/png;base64,${buf.toString("base64")}`;
+    } catch {
         return null;
     }
 };
@@ -108,18 +122,16 @@ const styles = {
 export default async function Image() {
     try {
         const fontData = await getFontData();
-        const imageUrl = DATA.avatarUrl
-            ? new URL(DATA.avatarUrl, DATA.url).toString()
-            : undefined;
+        const avatarDataUri = getAvatarDataUri();
 
         return new ImageResponse(
             (
                 <div style={styles.outerWrapper}>
                     <div style={styles.middleWrapper}>
                         <div style={styles.wrapper}>
-                            {imageUrl && (
+                            {avatarDataUri && (
                                 <div style={styles.imageSection}>
-                                    <img src={imageUrl} alt={DATA.name} style={styles.image} />
+                                    <img src={avatarDataUri} alt={DATA.name} style={styles.image} />
                                 </div>
                             )}
                             <div style={styles.mainContainer}>
