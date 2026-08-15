@@ -10,6 +10,7 @@ import { Docker } from "@/components/ui/svgs/docker";
 import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
 import { Dotnet } from "@/components/ui/svgs/dotnet";
+import { Cplusplus } from "@/components/ui/svgs/cplusplus";
 
 export const DATA = {
   name: "Abdulrahman Mohamed Sayed",
@@ -26,7 +27,7 @@ export const DATA = {
   skills: [
     { name: "C#", icon: Csharp },
     { name: ".NET", icon: Dotnet },
-    { name: "C++", icon: Java },
+    { name: "C++", icon: Cplusplus },
     { name: "Python", icon: Python },
     { name: "TypeScript", icon: Typescript },
     { name: "React", icon: ReactLight },
