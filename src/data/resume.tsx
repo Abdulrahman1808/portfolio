@@ -15,7 +15,7 @@ import { Cplusplus } from "@/components/ui/svgs/cplusplus";
 export const DATA = {
   name: "Abdulrahman Mohamed Sayed",
   initials: "AM",
-  url: "https://portfolio.is-a.dev",
+  url: "https://abdulrahman.is-a.dev",
   location: "Cairo, Egypt",
   locationLink:
     "https://www.google.com/maps/place/Cairo+Governorate,+Egypt",
